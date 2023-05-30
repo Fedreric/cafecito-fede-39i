@@ -5,6 +5,7 @@ import FooterFedeLedesma from './components/common/FooterFedeLedesma';
 import Inicio from './views/Inicio';
 import Error404 from './views/Error404';
 import DetalleProducto from './views/DetalleProducto';
+import Administrador from './views/Administrador';
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
         </header>
         {/* <Inicio></Inicio> */}
       {/* <Error404></Error404> */}
-      <DetalleProducto></DetalleProducto>
+      {/* <DetalleProducto></DetalleProducto> */}
+      <Administrador></Administrador>
       </section>
       <FooterFedeLedesma></FooterFedeLedesma>
     </>
