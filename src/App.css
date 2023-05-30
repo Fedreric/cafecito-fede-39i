@@ -1,6 +1,8 @@
-.menu{
-  background-color: red;
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.menu a{
-  color: white;
+.mainPage{
+  flex-grow: 1;
 }
