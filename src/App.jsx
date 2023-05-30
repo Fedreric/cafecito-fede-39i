@@ -1,14 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import './App.css'
 import Menu from './components/common/Menu';
+import FooterFedeLedesma from './components/common/FooterFedeLedesma';
 
 function App() {
 
   return (
-    <>
-      <header>
+    < >
+      <section className='mainPage'>
+        <header>
         <Menu></Menu>
-      </header>
+        </header>
+      </section>
+      <FooterFedeLedesma></FooterFedeLedesma>
     </>
   )
 }
