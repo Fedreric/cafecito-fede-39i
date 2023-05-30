@@ -6,3 +6,9 @@
 .mainPage{
   flex-grow: 1;
 }
+
+@media (min-width: 992px) { 
+  .error404{
+    width: 50%;
+  }
+ }
