@@ -6,6 +6,7 @@ import Inicio from './views/Inicio';
 import Error404 from './views/Error404';
 import DetalleProducto from './views/DetalleProducto';
 import Administrador from './views/Administrador';
+import CrearProducto from './views/producto/CrearProducto';
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
         {/* <Inicio></Inicio> */}
       {/* <Error404></Error404> */}
       {/* <DetalleProducto></DetalleProducto> */}
-      <Administrador></Administrador>
+      {/* <Administrador></Administrador> */}
+      <CrearProducto></CrearProducto>
       </section>
       <FooterFedeLedesma></FooterFedeLedesma>
     </>
