@@ -4,6 +4,7 @@ import Menu from './components/common/Menu';
 import FooterFedeLedesma from './components/common/FooterFedeLedesma';
 import Inicio from './views/Inicio';
 import Error404 from './views/Error404';
+import DetalleProducto from './views/DetalleProducto';
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
         <Menu></Menu>
         </header>
         {/* <Inicio></Inicio> */}
-      <Error404></Error404>
+      {/* <Error404></Error404> */}
+      <DetalleProducto></DetalleProducto>
       </section>
       <FooterFedeLedesma></FooterFedeLedesma>
     </>
