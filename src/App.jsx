@@ -3,6 +3,7 @@ import './App.css'
 import Menu from './components/common/Menu';
 import FooterFedeLedesma from './components/common/FooterFedeLedesma';
 import Inicio from './views/Inicio';
+import Error404 from './views/Error404';
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
         <header>
         <Menu></Menu>
         </header>
-        <Inicio></Inicio>
+        {/* <Inicio></Inicio> */}
+      <Error404></Error404>
       </section>
       <FooterFedeLedesma></FooterFedeLedesma>
     </>
