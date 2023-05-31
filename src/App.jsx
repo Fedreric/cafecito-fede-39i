@@ -1,32 +1,42 @@
-import 'bootstrap/dist/css/bootstrap.min.css';  
-import './App.css'
-import Menu from './components/common/Menu';
-import FooterFedeLedesma from './components/common/FooterFedeLedesma';
-import Inicio from './components/views/Inicio';
-import Error404 from './components/views/Error404';
-import DetalleProducto from './components/views/DetalleProducto';
-import Administrador from './components/views/Administrador';
-import CrearProducto from './components/views/producto/CrearProducto';
-import EditarProducto from './components/views/producto/EditarProducto';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Menu from "./components/common/Menu";
+import FooterFedeLedesma from "./components/common/FooterFedeLedesma";
+import Inicio from "./components/views/Inicio";
+import Error404 from "./components/views/Error404";
+import DetalleProducto from "./components/views/DetalleProducto";
+import Administrador from "./components/views/Administrador";
+import Registro from "./components/views/Registro";
+import CrearProducto from "./components/views/producto/CrearProducto";
+import EditarProducto from "./components/views/producto/EditarProducto";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./components/views/Login";
 
 function App() {
-
   return (
-    <>
-      <section className='mainPage'>
+    <BrowserRouter>
+      <section className="mainPage">
         <header>
-        <Menu></Menu>
+          <Menu></Menu>
         </header>
-        <Inicio></Inicio>
-      {/* <Error404></Error404> */}
-      {/* <DetalleProducto></DetalleProducto> */}
-      {/* <Administrador></Administrador> */}
-      {/* <CrearProducto></CrearProducto> */}
-      {/* <EditarProducto></EditarProducto> */}
+        <Routes>
+          <Route exact path="/" element={<Inicio></Inicio>}></Route>
+          <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
+          <Route exact path="/registro" element={<Registro></Registro>}></Route>
+          <Route exact path="/login" element={<Login></Login>}></Route>
+          <Route
+            exact
+            path="/detalle"
+            element={<DetalleProducto></DetalleProducto>}
+          ></Route>
+          <Route exact path="/administrador/crear" element={<CrearProducto></CrearProducto>}></Route>
+          <Route exact path="/administrador/editar" element={<EditarProducto></EditarProducto>}></Route>
+          <Route path="*" element={<Error404></Error404>}></Route>
+        </Routes>
       </section>
       <FooterFedeLedesma></FooterFedeLedesma>
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
