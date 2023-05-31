@@ -2,12 +2,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Menu from './components/common/Menu';
 import FooterFedeLedesma from './components/common/FooterFedeLedesma';
-import Inicio from './views/Inicio';
-import Error404 from './views/Error404';
-import DetalleProducto from './views/DetalleProducto';
-import Administrador from './views/Administrador';
-import CrearProducto from './views/producto/CrearProducto';
-import EditarProducto from './views/producto/EditarProducto';
+import Inicio from './components/views/Inicio';
+import Error404 from './components/views/Error404';
+import DetalleProducto from './components/views/DetalleProducto';
+import Administrador from './components/views/Administrador';
+import CrearProducto from './components/views/producto/CrearProducto';
+import EditarProducto from './components/views/producto/EditarProducto';
 
 function App() {
 
@@ -17,12 +17,12 @@ function App() {
         <header>
         <Menu></Menu>
         </header>
-        {/* <Inicio></Inicio> */}
+        <Inicio></Inicio>
       {/* <Error404></Error404> */}
       {/* <DetalleProducto></DetalleProducto> */}
       {/* <Administrador></Administrador> */}
       {/* <CrearProducto></CrearProducto> */}
-      <EditarProducto></EditarProducto>
+      {/* <EditarProducto></EditarProducto> */}
       </section>
       <FooterFedeLedesma></FooterFedeLedesma>
     </>
