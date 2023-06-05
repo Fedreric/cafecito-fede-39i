@@ -12,7 +12,15 @@ const Login = () => {
 
   
   const onSubmit = (usuario) =>{
-      login(usuario);
+      login(usuario).then((respuesta)=>{
+        if(respuesta){
+            //debo loguear al usuario
+            sessionStorage.setItem('usuario', JSON.stringify(respuesta))
+        }else{
+            //Mensaje de error al usuario
+            alert('ERROR');
+        }
+      })
   }
 
   return (
@@ -40,8 +48,10 @@ const Login = () => {
               <Form.Control type="password" placeholder="Password" {
                     ...register('password',{
                         required: 'El password es obligatorio',
-                        pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
-                        message: "La contraseña debe contener una Mayuscula, caracter especial y numero"
+                        pattern: {
+                            value:/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
+                            message: "La contraseña debe contener una Mayuscula, caracter especial y numero"
+                        }
                     })
                 }
               />
