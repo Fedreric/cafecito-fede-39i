@@ -1,4 +1,4 @@
-import { Button, Form, Container } from "react-bootstrap";
+import { Button, Form, Container, FloatingLabel } from "react-bootstrap";
 
 const CrearProducto = () => {
   return (
@@ -16,17 +16,29 @@ const CrearProducto = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="imagen">
           <Form.Label>Imagen URL*</Form.Label>
-          <Form.Control type="text" placeholder="https://cdn7.kiwilimon.com/recetaimagen/36986/640x640/46349.jpg.webp" />
+          <Form.Control
+            type="text"
+            placeholder="https://cdn7.kiwilimon.com/recetaimagen/36986/640x640/46349.jpg.webp"
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="categoria">
           <Form.Label>Categoria*</Form.Label>
           <Form.Select>
-          <option>Categoria 1</option>
-          <option>Categoria 2</option>
-          <option>Categoria 3</option>
-          <option>Categoria 4</option>
-          <option>Categoria 5</option>
-        </Form.Select>
+            <option>Categoria 1</option>
+            <option>Categoria 2</option>
+            <option>Categoria 3</option>
+            <option>Categoria 4</option>
+            <option>Categoria 5</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="descripcion">
+          <FloatingLabel
+            controlId="floatingTextarea"
+            label="Descripcion*"
+            className="mb-3"
+          >
+            <Form.Control as="textarea" placeholder="Leave a comment here" />
+          </FloatingLabel>
         </Form.Group>
         <Button variant="primary" type="submit">
           Agregar

@@ -28,6 +28,15 @@ const EditarProducto = () => {
           <option>Categoria 5</option>
         </Form.Select>
         </Form.Group>
+        <Form.Group className="mb-3" controlId="descripcion">
+          <FloatingLabel
+            controlId="floatingTextarea"
+            label="Descripcion*"
+            className="mb-3"
+          >
+            <Form.Control as="textarea" placeholder="Leave a comment here" />
+          </FloatingLabel>
+        </Form.Group>
         <Button variant="primary" type="submit">
           Editar
         </Button>
