@@ -1,4 +1,4 @@
-import { Button, Form, Container } from "react-bootstrap";
+import { Button, Form, Container, FloatingLabel } from "react-bootstrap";
 
 const EditarProducto = () => {
     return (
