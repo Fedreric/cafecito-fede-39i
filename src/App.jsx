@@ -11,8 +11,11 @@ import CrearProducto from "./components/views/producto/CrearProducto";
 import EditarProducto from "./components/views/producto/EditarProducto";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/views/Login";
+import { useState } from "react";
 
 function App() {
+  const [usuarioLogueado, setUsuarioLogeado] = useState({});
+
   return (
     <BrowserRouter>
       <section className="mainPage">
@@ -23,7 +26,7 @@ function App() {
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
           <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
           <Route exact path="/registro" element={<Registro></Registro>}></Route>
-          <Route exact path="/login" element={<Login></Login>}></Route>
+          <Route exact path="/login" element={<Login setUsuarioLogeado={setUsuarioLogeado}></Login>}></Route>
           <Route
             exact
             path="/detalle"
