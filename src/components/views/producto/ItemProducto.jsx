@@ -1,17 +1,23 @@
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const ItemProducto = () => {
+const ItemProducto = ({producto}) => {
+
+  const borrarProducto = () =>{
+    
+  }
+
   return (
     <tr>
-      <td>1</td>
-      <td>Latte</td>
-      <td>900</td>
+      <td>{producto.id}</td>
+      <td>{producto.nombreProducto}</td>
+      <td>$ {producto.precio}</td>
       <td>
-        https://cdn7.kiwilimon.com/recetaimagen/36986/640x640/46349.jpg.webp
+      {producto.imagen}
       </td>
-      <td>Café</td>
+      <td>{producto.categoria}</td>
       <td className="d-flex flex-column">
-        <Button variant="warning">Editar</Button>
+        <Link className="btn btn-warning" to={"/administrador/editar"}>Editar</Link>
         <Button variant="danger">Borrar</Button>
       </td>
     </tr>

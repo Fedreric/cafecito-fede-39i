@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Table, Button } from "react-bootstrap";
 import ItemProducto from "./producto/ItemProducto";
+import { obtenerProductos } from "../helpers/queries";
 
 const Administrador = () => {
+  const [productos, setProductos] = useState([]);
+  useEffect(()=>{
+    obtenerProductos().then((respuesta)=>{
+      console.log(respuesta);
+      setProductos(respuesta);
+    })
+  },[])
   return (
     <Container className="my-5">
       <section className="d-flex justify-content-between">
@@ -21,8 +29,9 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
-          <ItemProducto></ItemProducto>
-          <ItemProducto></ItemProducto>
+          {
+            productos.map((producto)=><ItemProducto key={producto.id} producto={producto}></ItemProducto>)
+          }  
         </tbody>
       </Table>
     </Container>
