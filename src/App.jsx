@@ -14,7 +14,8 @@ import Login from "./components/views/Login";
 import { useState } from "react";
 
 function App() {
-  const [usuarioLogueado, setUsuarioLogeado] = useState({});
+  const usuarioSesionStorage = JSON.parse(sessionStorage.getItem('usuario')) || {};
+  const [usuarioLogueado, setUsuarioLogeado] = useState(usuarioSesionStorage);
 
   return (
     <BrowserRouter>
