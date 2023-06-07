@@ -1,7 +1,16 @@
 import { Nav, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Menu = ({usuarioLogueado, setUsuarioLogeado}) => {
+  const navegacion = useNavigate();
+
+  const logout =()=>{
+    //borar el usuario del sesion storage
+    sessionStorage.removeItem('usuario')
+    setUsuarioLogeado({});
+    navegacion('/');
+  }
+
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -16,7 +25,7 @@ const Menu = ({usuarioLogueado, setUsuarioLogeado}) => {
                 usuarioLogueado.email?(
                   <>
                   <NavLink end className={'nav-item nav-link'} to={'/administrador'}>Administrador</NavLink>
-                  <Button variant="danger">Logout</Button>
+                  <Button variant="danger" onClick={logout}>Logout</Button>
                   </>
                 ):(
                   <NavLink end className={'nav-item nav-link'} to={'/login'}>Login</NavLink>
