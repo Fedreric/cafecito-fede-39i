@@ -23,7 +23,7 @@ const CrearProducto = () => {
           <Form.Control
             type="text"
             placeholder="Ej: Café"
-            {...register("producto", {
+            {...register("nombreProducto", {
               required: "El nombre del producto es obligatorio",
               minLength: {
                 value: 4,
@@ -36,7 +36,7 @@ const CrearProducto = () => {
             })}
           />
           <Form.Text className="text-danger fst-italic">
-            {errors.producto?.message}
+            {errors.nombreProducto?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="precio">
@@ -65,7 +65,7 @@ const CrearProducto = () => {
           <Form.Control
             type="text"
             placeholder="https://cdn7.kiwilimon.com/recetaimagen/36986/640x640/46349.jpg.webp"
-            {...register("urlImagen", {
+            {...register("imagen", {
               required: "El url de la imagen es obligatorio",
               pattern: {
                 value: /^(https?:\/\/.*\.(?:jpg|png|jpeg|webp))$/,
@@ -78,7 +78,7 @@ const CrearProducto = () => {
             })}
           />
           <Form.Text className="text-danger fst-italic">
-            {errors.urlImagen?.message}
+            {errors.imagen?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="categoria">
