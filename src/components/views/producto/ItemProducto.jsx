@@ -46,7 +46,7 @@ const ItemProducto = ({producto, setProductos}) => {
       <td>{producto.id}</td>
       <td>{producto.nombreProducto}</td>
       <td>$ {producto.precio}</td>
-      <td>
+      <td classname='text-truncate'>
       {producto.imagen}
       </td>
       <td>{producto.categoria}</td>

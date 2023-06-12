@@ -6,6 +6,9 @@
 .mainPage{
   flex-grow: 1;
 }
+/* table{
+  table-layout: fixed;
+} */
 textarea{
   resize: none;
 }
