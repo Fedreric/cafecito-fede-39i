@@ -46,12 +46,12 @@ const ItemProducto = ({producto, setProductos}) => {
       <td>{producto.id}</td>
       <td>{producto.nombreProducto}</td>
       <td>$ {producto.precio}</td>
-      <td classname='text-truncate'>
+      <td className='text-truncate'>
       {producto.imagen}
       </td>
       <td>{producto.categoria}</td>
       <td className="d-flex flex-column">
-        <Link className="btn btn-warning" to={"/administrador/editar"}>Editar</Link>
+        <Link className="btn btn-warning" to={"/administrador/editar/"+producto.id}>Editar</Link>
         <Button variant="danger" onClick={borrarProducto}>Borrar</Button>
       </td>
     </tr>

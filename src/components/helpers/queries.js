@@ -45,6 +45,15 @@ export const obtenerProductos = async () =>{
         console.log(e); 
     }
 }
+export const obtenerProducto = async (id) =>{
+    try{
+        const respuesta = await fetch(`${URL_PRODUCTO}/${id}`);
+        const producto = await respuesta.json();
+        return producto;
+    }catch(e){
+        console.log(e); 
+    }
+}
 
 export const consultaBorrarProducto = async (id) =>{
     try{
