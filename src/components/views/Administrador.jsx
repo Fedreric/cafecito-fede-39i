@@ -9,6 +9,7 @@ const Administrador = () => {
     obtenerProductos().then((respuesta)=>{
       console.log(respuesta);
       setProductos(respuesta);
+      //resolver que sucede al no iniciar la api
     })
   },[])
   return (

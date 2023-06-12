@@ -45,3 +45,14 @@ export const obtenerProductos = async () =>{
         console.log(e); 
     }
 }
+
+export const consultaBorrarProducto = async (id) =>{
+    try{
+        const respuesta = await fetch(`${URL_PRODUCTO}/${id}`,{
+            method:"DELETE"
+        });
+        return respuesta;
+    }catch(e){
+        console.log(e); 
+    }
+}

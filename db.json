@@ -1,11 +1,36 @@
 {
-    "productos": [
-      { "id": 1, "nombreProducto": "Café", "precio": 450, "categoria": "Bebida caliente", "descripcion":"alguna descripcion", "imagen":"linkdelaimagen" },
-      { "id": 2, "nombreProducto": "Té", "precio": 250, "categoria": "Bebida caliente", "descripcion":"alguna descripcion", "imagen":"linkdelaimagen" },
-      { "id": 3, "nombreProducto": "Medialuna", "precio": 70, "categoria": "dulce", "descripcion":"alguna descripcion", "imagen":"linkdelaimagen" },
-      { "id": 4, "nombreProducto": "Medialuna22", "precio": 70, "categoria": "dulce", "descripcion":"alguna descripcion", "imagen":"linkdelaimagen" }
-    ],
-    "usuarios": [
-      { "id": 1, "nombreUsuario": "admin", "email": "admin@admin.com","password":"Admin2023@" }
-    ]
-  }
+  "productos": [
+    {
+      "id": 1,
+      "nombreProducto": "Café",
+      "precio": 450,
+      "categoria": "Bebida caliente",
+      "descripcion": "alguna descripcion",
+      "imagen": "linkdelaimagen"
+    },
+    {
+      "id": 2,
+      "nombreProducto": "Té",
+      "precio": 250,
+      "categoria": "Bebida caliente",
+      "descripcion": "alguna descripcion",
+      "imagen": "linkdelaimagen"
+    },
+    {
+      "id": 3,
+      "nombreProducto": "Medialuna",
+      "precio": 70,
+      "categoria": "dulce",
+      "descripcion": "alguna descripcion",
+      "imagen": "linkdelaimagen"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "email": "admin@admin.com",
+      "password": "Admin2023@"
+    }
+  ]
+}
