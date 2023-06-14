@@ -9,19 +9,19 @@
       "imagen": "linkdelaimagen"
     },
     {
-      "categoria": "salado",
-      "descripcion": "medialuna de manteca",
-      "imagen": "https://sinreservas.com.ar/download/multimedia.normal.8e7535fe7665009a.4c6120706170612073757320392072656365746173206261cc817369636173205f6e6f726d616c2e77656270.webp",
-      "nombreProducto": "medialuna",
-      "precio": 200,
-      "id": 2
-    },
-    {
       "categoria": "dulce",
       "descripcion": "medialuna de manteca",
       "imagen": "https://sinreservas.com.ar/download/multimedia.normal.8e7535fe7665009a.4c6120706170612073757320392072656365746173206261cc817369636173205f6e6f726d616c2e77656270.webp",
-      "nombreProducto": "medialuna 2",
-      "precio": 200,
+      "nombreProducto": "medialuna",
+      "precio": 250,
+      "id": 2
+    },
+    {
+      "nombreProducto": "medialuna especial",
+      "precio": "350",
+      "imagen": "https://sinreservas.com.ar/download/multimedia.normal.8e7535fe7665009a.4c6120706170612073757320392072656365746173206261cc817369636173205f6e6f726d616c2e77656270.webp",
+      "categoria": "dulce",
+      "descripcion": "medialuna con jamon y queso especial",
       "id": 3
     },
     {

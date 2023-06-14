@@ -1,15 +1,17 @@
 import { Button, Form, Container, FloatingLabel } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-import { obtenerProducto } from "../../helpers/queries";
-import { useParams } from "react-router-dom";
+import { consultaEditarProducto, obtenerProducto } from "../../helpers/queries";
+import { useNavigate, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
+
 const EditarProducto = () => {
  const {id} = useParams();
+ const navegacion = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
     setValue
   } = useForm();
 
@@ -26,8 +28,16 @@ useEffect(() => {
 }, [])
 
 
-  const onSubmit = (producto) => {
-    console.log(producto);
+  const onSubmit = (productoEditado) => {
+    console.log(productoEditado);
+    consultaEditarProducto(productoEditado,id).then((respuesta)=>{
+      if(respuesta && respuesta.status === 200){
+        Swal.fire('Producto actualizado!', `El producto: ${productoEditado.nombreProducto} fue editado.`, 'success')
+        navegacion('/administrador')
+      }else{
+        Swal.fire('Error!', `El producto: ${productoEditado.nombreProducto} no pudo ser actualizado. Intente mas tarde`, 'error')
+      }
+    })
   };
     return (
         <Container className="my-5">
@@ -141,7 +151,7 @@ useEffect(() => {
           </Form.Text>
         </Form.Group>
         <Button variant="primary" type="submit">
-          Agregar
+          Actualizar
         </Button>
       </Form>
     </Container>

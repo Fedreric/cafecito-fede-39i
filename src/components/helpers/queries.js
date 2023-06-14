@@ -79,3 +79,18 @@ export const consultaCrearProducto = async (producto) =>{
         console.log(e); 
     }
 }
+export const consultaEditarProducto = async (producto,id) =>{
+    try{
+        console.log(producto)
+        const respuesta = await fetch(URL_PRODUCTO+"/"+id,{
+            method:"PUT",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify(producto)
+        });
+        return respuesta;
+    }catch(e){
+        console.log(e); 
+    }
+}
