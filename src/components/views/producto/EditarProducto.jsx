@@ -17,6 +17,10 @@ useEffect(() => {
   obtenerProducto(id).then((respuesta)=>{
     console.log(respuesta)
     setValue('nombreProducto', respuesta.nombreProducto)
+    setValue('precio', respuesta.precio)
+    setValue('imagen', respuesta.imagen)
+    setValue('categoria', respuesta.categoria)
+    setValue('descripcion', respuesta.descripcion)
     //hacer lo mismo con el resto
   })
 }, [])
