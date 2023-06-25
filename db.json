@@ -1,12 +1,12 @@
 {
   "productos": [
     {
-      "id": 1,
       "nombreProducto": "Café",
       "precio": 450,
-      "categoria": "Bebida caliente",
+      "imagen": "https://i.blogs.es/421374/cafe-con-leche2/650_1200.jpg",
+      "categoria": "bebida caliente",
       "descripcion": "alguna descripcion",
-      "imagen": "linkdelaimagen"
+      "id": 1
     },
     {
       "categoria": "dulce",
