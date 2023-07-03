@@ -18,7 +18,7 @@ const ItemProducto = ({producto, setProductos}) => {
     }).then((result) => {
       if (result.isConfirmed) {
         //aqui tengo que hacer el delete
-        consultaBorrarProducto(producto.id).then((respuesta) =>{
+        consultaBorrarProducto(producto._id).then((respuesta) =>{
           if(respuesta.status === 200){
             Swal.fire(
               'Producto eliminado!',
@@ -43,7 +43,7 @@ const ItemProducto = ({producto, setProductos}) => {
 
   return (
     <tr>
-      <td>{producto.id}</td>
+      <td>{producto._id}</td>
       <td>{producto.nombreProducto}</td>
       <td>$ {producto.precio}</td>
       <td className='text-truncate'>
