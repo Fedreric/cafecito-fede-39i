@@ -43,7 +43,6 @@ const ItemProducto = ({producto, setProductos}) => {
 
   return (
     <tr>
-      <td>{producto._id}</td>
       <td>{producto.nombreProducto}</td>
       <td>$ {producto.precio}</td>
       <td className='text-truncate'>
@@ -51,7 +50,7 @@ const ItemProducto = ({producto, setProductos}) => {
       </td>
       <td>{producto.categoria}</td>
       <td className="d-flex flex-column">
-        <Link className="btn btn-warning" to={"/administrador/editar/"+producto.id}>Editar</Link>
+        <Link className="btn btn-warning" to={"/administrador/editar/"+producto._id}>Editar</Link>
         <Button variant="danger" onClick={borrarProducto}>Borrar</Button>
       </td>
     </tr>

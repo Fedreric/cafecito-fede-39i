@@ -22,7 +22,7 @@ const Inicio = () => {
         <Row xs={1} md={2} lg={3}>
             {
              productos.map((producto)=>{
-                return <CardProducto producto={producto}></CardProducto> 
+                return <CardProducto key={producto._id} producto={producto}></CardProducto> 
              })
             }
         </Row>

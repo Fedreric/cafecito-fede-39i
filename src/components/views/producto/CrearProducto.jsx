@@ -14,6 +14,7 @@ const CrearProducto = () => {
     console.log(producto);
     //agregar producto a la api
     consultaCrearProducto(producto).then((respuesta)=>{
+      console.log(respuesta)
       if(respuesta.status === 201){
         Swal.fire(
           'Producto creado!',
@@ -44,12 +45,12 @@ const CrearProducto = () => {
             {...register("nombreProducto", {
               required: "El nombre del producto es obligatorio",
               minLength: {
-                value: 4,
-                message: "El nombre debe contener como minimo 4 caracteres",
+                value: 2,
+                message: "El nombre debe contener como minimo 2 caracteres",
               },
               maxLength: {
-                value: 20,
-                message: "El nombre debe contener como maximo 20 caracteres",
+                value: 40,
+                message: "El nombre debe contener como maximo 40 caracteres",
               },
             })}
           />

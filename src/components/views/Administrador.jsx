@@ -22,7 +22,6 @@ const Administrador = () => {
       <Table bordered hover variant="dark" responsive>
         <thead>
           <tr>
-            <th>Cod</th>
             <th>Producto</th>
             <th>Precio</th>
             <th>Imagen</th>

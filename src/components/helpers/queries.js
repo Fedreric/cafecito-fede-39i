@@ -66,6 +66,7 @@ export const consultaBorrarProducto = async (id) =>{
     }
 }
 export const consultaCrearProducto = async (producto) =>{
+    console.log(producto)
     try{
         const respuesta = await fetch(URL_PRODUCTO,{
             method:"POST",
@@ -74,6 +75,7 @@ export const consultaCrearProducto = async (producto) =>{
             },
             body: JSON.stringify(producto)
         });
+        console.log('respuesta' + respuesta)
         return respuesta;
     }catch(e){
         console.log(e); 
