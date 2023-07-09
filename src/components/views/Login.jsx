@@ -20,7 +20,7 @@ const Login = ({ setUsuarioLogeado }) => {
             sessionStorage.setItem('usuario', JSON.stringify(respuesta));
             setUsuarioLogeado(respuesta);
             Swal.fire('Listo', 'Disfruta nuestros productos!','success');
-            navegacion('/administrador')
+            navegacion('/')
         }else{
             //Mensaje de error al usuario
             Swal.fire('ERROR', 'Email o password incorrecto','error');

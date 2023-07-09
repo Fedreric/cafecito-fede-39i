@@ -31,7 +31,22 @@ export const login = async (usuario) =>{
       console.log("errores en el login");
       return;
     }
-  }
+}
+
+export const consultaCrearUsuario = async (usuario) =>{
+    try{
+        const respuesta = await fetch(URL_USUARIO + '/nuevo',{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify(usuario)
+        });
+        return respuesta;
+    }catch(e){
+        console.log(e); 
+    }
+}
 
 export const obtenerProductos = async () =>{
     try{
