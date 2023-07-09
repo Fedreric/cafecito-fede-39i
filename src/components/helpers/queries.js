@@ -10,31 +10,28 @@ PATH: Modifica una propiedad del elemento
 const URL_USUARIO = import.meta.env.VITE_API_USUARIO;
 const URL_PRODUCTO = import.meta.env.VITE_API_PRODUCTO;
 export const login = async (usuario) =>{
-    console.log(usuario);
-    try{
-        const respuesta = await fetch (URL_USUARIO)
-        const listaUsuarios = await respuesta.json();
-        console.log(listaUsuarios)
-        //buscar
-        const usuarioBuscado = listaUsuarios.find((itemUsuario)=>itemUsuario.email === usuario.email)
-        if(usuarioBuscado){
-            console.log('Email encontrado')
-            //verificar el pass
-            if(usuarioBuscado.password === usuario.password){
-                console.log('Encontramos el usuario')
-                return usuarioBuscado;
-            }else{
-                console.log('Contraseña incorrecta')
-                return null;
-            }
-        }else{
-            console.log('email incorrecto')
-            return null;
-        }
-    }catch(e){
-        console.log(e)
+    try {
+      console.log(usuario);
+      const respuesta = await fetch(URL_USUARIO, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(usuario),
+      });
+      const datos = await respuesta.json();
+      return {
+        status: respuesta.status,
+        mensaje: datos.mensaje,
+        usuario: datos.nombre,
+        uid: datos.uid
+      };
+    
+    } catch (error) {
+      console.log("errores en el login");
+      return;
     }
-}
+  }
 
 export const obtenerProductos = async () =>{
     try{
